@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/home'; 
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import ProductCard from './components/productCard'; // Updated to match the filename
+import ProductCard from './components/productCard'; 
 import Shop from './components/shop';
 import About from './components/about';
 import './App.css';
@@ -21,7 +21,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        <Footer /> {/* Add Footer here if it needs to be displayed on every page */}
+        <Footer /> 
       </div>
     </Router>
   );

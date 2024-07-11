@@ -10,7 +10,7 @@ const About = () => {
         <div className="about-section">
           <h3>Our Story</h3>
           <p>
-            Gadget Craze (U) Ltd was founded with the mission to provide the latest and greatest gadgets to tech enthusiasts. From smartphones to smart home devices, we aim to be your go-to source for all things tech.
+            K-NET (U) Ltd was founded with the mission to provide the latest and greatest gadgets to tech enthusiasts. From smartphones to smart home devices, we aim to be your go-to source for all things tech.
           </p>
         </div>
         <div className="about-section">

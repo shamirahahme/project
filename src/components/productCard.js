@@ -11,7 +11,6 @@ const ProductCard = ({ image, price, name, description }) => {
         <h3>{name}</h3>
         <p>{description}</p>
         <div className="price">{price}</div>
-        <a href="#" className="add-to-cart">Add to Cart</a>
       </div>
     </div>
   );
