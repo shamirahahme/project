@@ -1,40 +1,72 @@
 /* Home.css */
 
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./components/images/iphone.jpeg'); /* Replace 'path/to/your/background-image.jpg' with your actual image path */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Ensure the background image does not repeat */
+  font-family: Arial, sans-serif; /* Example: Set a default font-family */
+  color: #fff; /* Default text color */
+}
+
 .home {
-  text-align: center;
-  padding: 20px;
-  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background: url('./components/images/light.jpeg') no-repeat center center/cover;
-  color: #fff;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 10px;
 }
 
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fe0000;
-}
-h1{
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fe0000; 
+.home h1, .home h2 {
+  text-align: center;
+  color: #333;
 }
 
+.home h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.home h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Search bar styles */
+.home input[type="text"] {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Product grid styles */
 .products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .product-card {
-  border: 1px solid #ddd;
+  background: white;
+  padding: 20px;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
@@ -45,183 +77,196 @@ h1{
 .product-card img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #ddd;
-}
-
-.product-card-content {
-  padding: 15px;
+  border-radius: 10px;
 }
 
 .product-card h3 {
-  font-size: 1.25rem;
-  margin: 10px 0;
+  font-size: 20px;
   color: #333;
+  margin: 15px 0 10px;
 }
 
 .product-card p {
+  font-size: 14px;
   color: #666;
+  margin: 0 0 10px;
 }
 
 .product-card .price {
-  font-size: 1.5rem;
-  color: #e91e63;
-  margin: 10px 0;
+  font-size: 18px;
+  color: #007bff;
+  font-weight: bold;
 }
 
-.product-card .add-to-cart {
-  display: block;
-  background-color: #ff0000;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home {
+    padding: 10px;
+  }
+
+  .home h1 {
+    font-size: 28px;
+  }
+
+  .home h2 {
+    font-size: 20px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
 }
 
-.product-card .add-to-cart:hover {
-  background-color: #f60000;
-}
 /* Footer.css */
 
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: left;
+  background-color: #141414; 
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.footer .footer-content {
+.footer-content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-.footer .footer-section {
-  flex: 1;
-  margin: 20px;
+.footer-section {
+  margin-bottom: 20px;
 }
 
-.footer h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #ff0000;
+.social-media .social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-.footer p, .footer a {
-  color: #fff;
-  font-size: 1rem;
+.social-icons li {
+  display: inline;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
   margin: 5px 0;
 }
 
-.footer a {
+.links a {
+  color: #ffaa00; 
   text-decoration: none;
-  color: hsl(0, 100%, 51%);
-  transition: color 0.3s;
+  margin: 0 5px;
 }
 
-.footer a:hover {
-  color: #ff0000;
+.links a:hover {
+  text-decoration: underline;
 }
 
-.footer .footer-section.address p {
-  margin: 0;
-}
-
-.footer .footer-section.follow-us a {
-  margin-right: 10px;
-}
-
-.footer .footer-section.follow-us i {
-  font-size: 1.2rem;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.footer .footer-section.follow-us i:hover {
-  color: #ff0000;
-}
-
-.footer .footer-bottom {
-  text-align: center;
-  padding: 10px;
-  background-color: #111;
-  color: #fff;
-  font-size: 0.9rem;
-  margin-top: 20px;
-}
-
-.footer .footer-bottom a {
-  color: #ff0000;
-  text-decoration: none;
-}
-
-.footer .footer-bottom a:hover {
-  color: #ff0000;
+.footer-bottom {
+  border-top: 1px solid #333333;
+  padding-top: 10px;
+  font-size: 14px;
 }
 
 /* Navbar.css */
-
 .navbar {
-  background-color: #000;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  color: white;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff0000;
+  padding: 10px;
+}
+
+.navbar-help {
+  font-size: 16px;
+}
+
+.navbar-help a {
+  color: black;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.navbar-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  padding: 10px 20px;
 }
 
-.navbar-logo {
-  font-size: 1.5rem;
-  color: #ff0000;
-  text-decoration: none;
+.navbar-logo img {
+  height: 40px;
 }
 
 .navbar-menu {
-  list-style: none;
   display: flex;
-  gap: 20px;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .navbar-menu li {
-  margin: 0;
+  margin: 0 10px;
 }
 
-.navbar-menu a {
+.navbar-menu li a {
+  color: white;
   text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  transition: color 0.3s;
 }
 
-.navbar-menu a:hover {
-  color: #4caf50;
-}
-
-.navbar .menu-icon {
+.menu-icon {
   display: none;
-  font-size: 1.5rem;
   cursor: pointer;
 }
 
+.menu-icon i {
+  font-size: 24px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .navbar-menu {
-    display: none;
+  .navbar-bottom {
     flex-direction: column;
-    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    display: none;
   }
 
   .navbar-menu.active {
     display: flex;
-    background-color: #000;
   }
 
-  .navbar .menu-icon {
-    display: block;
+  .navbar-menu li {
+    margin: 10px 0;
   }
 }
+
 
 /* Shop.css */
 
@@ -325,7 +370,7 @@ background-size: cover;
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background: url('./components/images/apple.jpeg') no-repeat center center/cover;
+  background: url('./components/images/iphone.jpeg') no-repeat center center/cover;
   color: #fff;
 }
 
@@ -360,4 +405,55 @@ background-size: cover;
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
 

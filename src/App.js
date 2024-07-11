@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import ProductCard from './components/productCard'; 
 import Shop from './components/shop';
 import About from './components/about';
+import Login from './components/login';
 import './App.css';
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
           <Route path="/productCard" element={<ProductCard />} /> 
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+
         </Routes>
         <Footer /> 
       </div>

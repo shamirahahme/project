@@ -1,6 +1,5 @@
-// components/Home.js
-import React from 'react';
-import ProductCard from './productCard';
+import React, { useState } from 'react';
+import ProductCard from './productCard'; 
 import Note from './images/note.jpeg';
 import Pro from './images/pro.jpeg';
 import Sam from './images/sam.jpeg';
@@ -13,7 +12,6 @@ import Itel from './images/itel.jpeg';
 import Huawei from './images/huawei.jpeg';
 import Google from './images/google.jpeg';
 
-//import './Home.css'; // Import the CSS file
 
 const products = [
   {
@@ -66,7 +64,7 @@ const products = [
   },
   {
     image: Itel,
-    price: '300,000UGX',
+    price: '300,000 UGX',
     name: 'A70( 4GB  RAM,128 ROM)',
     description: 'Memory Fusion|13M Dual Rear'
   },
@@ -78,21 +76,38 @@ const products = [
   },
   {
     image: Google,
-    price: '650,000UGX',
+    price: '650,000 UGX',
     name: 'Google Pixel 8pro',
     description: '12GB RAM/128ROM'
   },
-  
-  
 ];
 
 const Home = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Function to handle search input change
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  // Filter products based on search term
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="home">
       <h2>Discover our latest products</h2>
       <h1>We deal in all kinds of phones and Japanese phones</h1>
+      {/* Search bar */}
+      <input
+        type="text"
+        placeholder="Search products..."
+        value={searchTerm}
+        onChange={handleSearchChange}
+      />
       <div className="products">
-        {products.map((product, index) => (
+        {filteredProducts.map((product, index) => (
           <ProductCard
             key={index}
             image={product.image}
