@@ -11,6 +11,7 @@ import Infinix from './images/infinix.jpeg';
 import Itel from './images/itel.jpeg';
 import Huawei from './images/huawei.jpeg';
 import Google from './images/google.jpeg';
+import Iphone from './images/iphone.jpeg';
 
 
 const products = [
@@ -79,6 +80,12 @@ const products = [
     price: '650,000 UGX',
     name: 'Google Pixel 8pro',
     description: '12GB RAM/128ROM'
+  },
+  {
+    image: Iphone,
+    price: '4,300,000 UGX',
+    name: 'Iphone 15 pro max',
+    description: '20GB RAM'
   },
 ];
 

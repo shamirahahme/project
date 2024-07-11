@@ -406,20 +406,19 @@ background-size: cover;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.login-container {
-  width: 100%;
-  max-width: 400px;
+.signup-form {
+  width: 350px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 5px;
+  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-.login-form {
-  display: flex;
-  flex-direction: column;
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .form-group {
@@ -430,30 +429,54 @@ background-size: cover;
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #333;
+  color: #555;
 }
 
 .form-group input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 4px;
+  box-sizing: border-box;
   font-size: 16px;
+  color: #555;
 }
 
-.login-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+
+.form-group input[type="submit"] {
   background-color: #007bff;
   color: #fff;
-  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.login-button:hover {
-  background-color: #0056b3;
+.form-group input[type="submit"]:hover {
+  background-color: #0069d9;
 }
 
+.signup-form p {
+  text-align: center;
+  margin-top: 15px;
+  color: #555;
+}
 
+.signup-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
+}

@@ -6,7 +6,7 @@ import Footer from './components/footer';
 import ProductCard from './components/productCard'; 
 import Shop from './components/shop';
 import About from './components/about';
-import Login from './components/login';
+import Login from './components/signUp';
 import './App.css';
 
 function App() {

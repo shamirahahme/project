@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-top">
         <div className="navbar-help">
-          Need help placing an order? 
+          K-NET PHONE WORLD (please call if you  need a phone)- 
           <a href="tel:0709744874">
             <i className="fas fa-phone"></i> +256 709717910
           </a>
